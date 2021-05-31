@@ -1,8 +1,7 @@
 extends KinematicBody
 
-var gravity = 9.8
-var jump = 7
-
+var gravity = 30
+var jump = 20
 
 export var max_speed = 10
 export var friction = 10
@@ -31,7 +30,6 @@ func _physics_process(delta):
 			speed = max_speed
 			
 	move_vector.z = input.z * speed
-	#move_and_slide(move_vector, Vector3.UP)
 	
 	if not is_on_floor():
 		move_vector.y -= gravity * delta
