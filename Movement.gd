@@ -26,6 +26,10 @@ func _physics_process(delta):
 	var input = get_input()
 	if input != Vector3.ZERO:
 		speed += acceleration
+		if input > Vector3.ZERO:
+			$CharacterMesh.rotation_degrees.y = 180
+		elif input < Vector3.ZERO:
+			$CharacterMesh.rotation_degrees.y = 0
 		if speed > max_speed:
 			speed = max_speed
 			
