@@ -2,6 +2,7 @@
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Camera.gd" type="Script" id=2]
+[ext_resource path="res://CameraStopper.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CubeMesh" id=1]
 size = Vector3( 10, 2, 10 )
@@ -9,9 +10,10 @@ size = Vector3( 10, 2, 10 )
 [sub_resource type="BoxShape" id=2]
 extents = Vector3( 25, 1, 25 )
 
-[sub_resource type="ShaderMaterial" id=3]
-
 [node name="Test Level" type="Spatial"]
+
+[node name="CameraStopper" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 20 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 
@@ -24,72 +26,6 @@ mesh = SubResource( 1 )
 material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="Floor"]
-shape = SubResource( 2 )
-
-[node name="Floor2" type="StaticBody" parent="."]
-transform = Transform( 9.90036e-16, 1.31134e-08, 0.3, 1, -7.54979e-08, 0, -7.54979e-08, -1, 4.37114e-08, 0, -13.2, 19 )
-
-[node name="MeshInstance" type="MeshInstance" parent="Floor2"]
-transform = Transform( 5, 7.10543e-15, -1.69407e-21, -2.84217e-14, 1, 0, 0, 0, 5, 0, 0, 0 )
-mesh = SubResource( 1 )
-material/0 = SubResource( 3 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Floor2"]
-shape = SubResource( 2 )
-
-[node name="Floor5" type="StaticBody" parent="."]
-transform = Transform( 9.90036e-16, 1.31134e-08, 0.3, 1, -7.54979e-08, 0, -7.54979e-08, -1, 4.37114e-08, 0, -10.2, 22 )
-
-[node name="MeshInstance" type="MeshInstance" parent="Floor5"]
-transform = Transform( 5, 7.10543e-15, -1.69407e-21, -2.84217e-14, 1, 0, 0, 0, 5, 0, 0, 0 )
-mesh = SubResource( 1 )
-material/0 = SubResource( 3 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Floor5"]
-shape = SubResource( 2 )
-
-[node name="Floor6" type="StaticBody" parent="."]
-transform = Transform( 9.90036e-16, 1.31134e-08, 0.3, 1, -7.54979e-08, 0, -7.54979e-08, -1, 4.37114e-08, 0, -7.2, 26 )
-
-[node name="MeshInstance" type="MeshInstance" parent="Floor6"]
-transform = Transform( 5, 7.10543e-15, -1.69407e-21, -2.84217e-14, 1, 0, 0, 0, 5, 0, 0, 0 )
-mesh = SubResource( 1 )
-material/0 = SubResource( 3 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Floor6"]
-shape = SubResource( 2 )
-
-[node name="Floor7" type="StaticBody" parent="."]
-transform = Transform( 9.90036e-16, 1.31134e-08, 0.3, -1.19209e-07, -1, 4.37114e-08, -1, 1.19209e-07, -1.91069e-15, 0, 19.8, -8 )
-
-[node name="MeshInstance" type="MeshInstance" parent="Floor7"]
-transform = Transform( 5, 7.10543e-15, -1.69407e-21, -2.84217e-14, 1, 0, 0, 0, 5, 0, 0, 0 )
-mesh = SubResource( 1 )
-material/0 = SubResource( 3 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Floor7"]
-shape = SubResource( 2 )
-
-[node name="Floor4" type="StaticBody" parent="."]
-transform = Transform( 9.90036e-16, 1.31134e-08, 0.3, -1.19209e-07, -1, 4.37114e-08, -1, 1.19209e-07, -1.91069e-15, 0, 14.8, -25 )
-
-[node name="MeshInstance" type="MeshInstance" parent="Floor4"]
-transform = Transform( 5, 7.10543e-15, -1.69407e-21, -2.84217e-14, 1, 0, 0, 0, 5, 0, 0, 0 )
-mesh = SubResource( 1 )
-material/0 = SubResource( 3 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Floor4"]
-shape = SubResource( 2 )
-
-[node name="Floor3" type="StaticBody" parent="."]
-transform = Transform( 5.73206e-16, 1.31134e-08, 0.3, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, -0.0651703, -19, 7 )
-
-[node name="MeshInstance" type="MeshInstance" parent="Floor3"]
-transform = Transform( 5, 0, 0, 0, 1, 0, 0, 0, 5, 0, 0, 0 )
-mesh = SubResource( 1 )
-material/0 = SubResource( 3 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Floor3"]
 shape = SubResource( 2 )
 
 [node name="Camera" type="Camera" parent="."]
