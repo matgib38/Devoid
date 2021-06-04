@@ -2,6 +2,7 @@ extends KinematicBody
 
 var gravity = 30
 var jump = 20
+var wall_jump = false
 
 export var max_speed = 10
 export var friction = 10
@@ -10,7 +11,7 @@ export var acceleration = 0.5
 
 var move_vector = Vector3.ZERO
 
-func get_input():
+func get_input(): #Codes for movement
 	var input = Vector3(
 		0,
 		0,
@@ -24,7 +25,7 @@ func _process(delta):
 
 func _physics_process(delta):
 	var input = get_input()
-	if input != Vector3.ZERO:
+	if input != Vector3.ZERO: #Codes for movement
 		speed += acceleration
 		if input > Vector3.ZERO:
 			$CharacterMesh.rotation_degrees.y = 180
@@ -38,7 +39,10 @@ func _physics_process(delta):
 	if not is_on_floor():
 		move_vector.y -= gravity * delta
 		
-	if Input.is_action_just_pressed("ui_up") and is_on_floor() :
+	if Input.is_action_just_pressed("ui_up") and is_on_floor() : #Codes for basic jump
+		move_vector.y = jump
+	
+	if Input.is_action_just_pressed("ui_up") and is_on_wall() and wall_jump == true: #Codes for wall jump
 		move_vector.y = jump
 		
 	move_and_slide(move_vector, Vector3.UP)
