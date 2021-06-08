@@ -1,8 +1,10 @@
 extends KinematicBody
 
 var gravity = 30
+var wall_gravity = 20
 var jump = 20
 var wall_jump = false
+var can_wall_jump = false
 
 export var max_speed = 10
 export var friction = 10
@@ -33,16 +35,33 @@ func _physics_process(delta):
 			$CharacterMesh.rotation_degrees.y = 0
 		if speed > max_speed:
 			speed = max_speed
-			
+	
 	move_vector.z = input.z * speed
 	
-	if not is_on_floor():
-		move_vector.y -= gravity * delta
+	if is_on_wall():
+		if wall_jump:
+			move_vector.y -= wall_gravity * delta
+		else:
+			move_vector.y -= gravity * delta
+	else:
+			move_vector.y -= gravity * delta
+		
+	if is_on_floor():
+		can_wall_jump = true
+				
+#	if not is_on_floor() and not is_on_wall() and wall_jump == false:
+#		print("falling")
+#		move_vector.y -= gravity * delta
+		
+#	if is_on_wall() and wall_jump == true:
+#		print("wall cling")
+#		move_vector.y -= wall_gravity * delta 
 		
 	if Input.is_action_just_pressed("ui_up") and is_on_floor() : #Codes for basic jump
 		move_vector.y = jump
 	
-	if Input.is_action_just_pressed("ui_up") and is_on_wall() and wall_jump == true: #Codes for wall jump
+	if Input.is_action_just_pressed("ui_up") and is_on_wall() and wall_jump == true and can_wall_jump: #Codes for wall jump
 		move_vector.y = jump
+		can_wall_jump = false
 		
-	move_and_slide(move_vector, Vector3.UP)
+	move_vector = move_and_slide(move_vector, Vector3.UP)

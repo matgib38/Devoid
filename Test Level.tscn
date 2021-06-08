@@ -14,9 +14,6 @@ extents = Vector3( 25, 1, 25 )
 
 [node name="Test Level" type="Spatial"]
 
-[node name="CameraStopper" parent="." instance=ExtResource( 3 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 22 )
-
 [node name="Player" parent="." instance=ExtResource( 1 )]
 
 [node name="Floor" type="StaticBody" parent="."]
@@ -30,12 +27,26 @@ material/0 = null
 [node name="CollisionShape" type="CollisionShape" parent="Floor"]
 shape = SubResource( 2 )
 
+[node name="Roof" type="StaticBody" parent="."]
+transform = Transform( -0.081, 0, 0, 0, 1, 0, 0, 0, 1, 0, 40, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Roof"]
+transform = Transform( 5, 0, 0, 0, 1, 0, 0, 0, 5, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Roof"]
+shape = SubResource( 2 )
+
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -4.2222e-08, 0.258819, -0.965926, 1.13133e-08, 0.965926, 0.258819, 1, 4.61853e-14, -4.37114e-08, -7, 4, 0 )
 script = ExtResource( 2 )
 
 [node name="CameraStopper2" parent="." instance=ExtResource( 3 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, -22 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 2.5, 0, 1, 0, -4.37114e-08, 0, 0, -22 )
+
+[node name="CameraStopper3" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1.19209e-07, 0, 1, 0, 2.5, 0, -1, 0, 1.19209e-07, 0, 0, 22 )
 
 [node name="BasicPlatform" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 17 )
@@ -47,4 +58,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 3 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, -13 )
 
 [node name="WallJump" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16, -5 )
+transform = Transform( 0.52, 0, 0, 0, 0.54, 0, 0, 0, 0.54, 0, 19, -5 )
