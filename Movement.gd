@@ -1,7 +1,7 @@
 extends KinematicBody
 
 var gravity = 30
-var wall_gravity = 20
+var wall_gravity = 5
 var jump = 20
 var wall_jump = false
 var can_wall_jump = false
@@ -10,6 +10,8 @@ export var max_speed = 10
 export var friction = 10
 export var speed = 1
 export var acceleration = 0.5
+
+export var wait_time = 3 #double jump cooldown
 
 var move_vector = Vector3.ZERO
 
@@ -39,7 +41,9 @@ func _physics_process(delta):
 	move_vector.z = input.z * speed
 	
 	if is_on_wall():
-		if wall_jump:
+		if wall_jump and can_wall_jump:
+			if move_vector.y > 0 :
+				move_vector.y = 0
 			move_vector.y -= wall_gravity * delta
 		else:
 			move_vector.y -= gravity * delta
@@ -48,14 +52,6 @@ func _physics_process(delta):
 		
 	if is_on_floor():
 		can_wall_jump = true
-				
-#	if not is_on_floor() and not is_on_wall() and wall_jump == false:
-#		print("falling")
-#		move_vector.y -= gravity * delta
-		
-#	if is_on_wall() and wall_jump == true:
-#		print("wall cling")
-#		move_vector.y -= wall_gravity * delta 
 		
 	if Input.is_action_just_pressed("ui_up") and is_on_floor() : #Codes for basic jump
 		move_vector.y = jump
@@ -63,5 +59,12 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_up") and is_on_wall() and wall_jump == true and can_wall_jump: #Codes for wall jump
 		move_vector.y = jump
 		can_wall_jump = false
+		start(wait_time) ## not working, need sir
 		
 	move_vector = move_and_slide(move_vector, Vector3.UP)
+
+
+func _on_WallJumpTimer_timeout():
+	set_one_shot(true)
+	
+	can_wall_jump = true
