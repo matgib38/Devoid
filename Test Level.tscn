@@ -58,4 +58,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 3 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, -13 )
 
 [node name="WallJump" parent="." instance=ExtResource( 5 )]
-transform = Transform( 0.52, 0, 0, 0, 0.54, 0, 0, 0, 0.54, 0, 1, -13 )
+transform = Transform( 0.22464, 0, 0, 0, 0.23328, 0, 0, 0, 0.216, 0, 1, -13 )

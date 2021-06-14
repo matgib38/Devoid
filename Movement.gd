@@ -59,12 +59,10 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_up") and is_on_wall() and wall_jump == true and can_wall_jump: #Codes for wall jump
 		move_vector.y = jump
 		can_wall_jump = false
-		start(wait_time) ## not working, need sir
+		$WallJumpTimer.start()
 		
 	move_vector = move_and_slide(move_vector, Vector3.UP)
 
 
 func _on_WallJumpTimer_timeout():
-	set_one_shot(true)
-	
 	can_wall_jump = true
