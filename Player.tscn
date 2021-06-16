@@ -35,4 +35,9 @@ shape = SubResource( 3 )
 wait_time = 1.5
 one_shot = true
 
+[node name="DoubleJumpTimer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
 [connection signal="timeout" from="WallJumpTimer" to="." method="_on_WallJumpTimer_timeout"]
+[connection signal="timeout" from="DoubleJumpTimer" to="." method="_on_DoubleJumpTimer_timeout"]

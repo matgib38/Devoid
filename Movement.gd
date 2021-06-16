@@ -5,6 +5,8 @@ var wall_gravity = 5
 var jump = 20
 var wall_jump = false
 var can_wall_jump = false
+var double_jump = false
+var can_double_jump = false
 
 export var max_speed = 10
 export var friction = 10
@@ -52,17 +54,25 @@ func _physics_process(delta):
 		
 	if is_on_floor():
 		can_wall_jump = true
+		can_double_jump = true
 		
-	if Input.is_action_just_pressed("ui_up") and is_on_floor() : #Codes for basic jump
+	if Input.is_action_just_pressed("ui_up") and is_on_floor(): #Codes for basic jump
 		move_vector.y = jump
 	
 	if Input.is_action_just_pressed("ui_up") and is_on_wall() and wall_jump == true and can_wall_jump: #Codes for wall jump
 		move_vector.y = jump
 		can_wall_jump = false
 		$WallJumpTimer.start()
-		
+	
+	if Input.is_action_just_pressed("ui_up") and not is_on_floor() and double_jump == true and can_double_jump:
+		move_vector.y = jump
+		can_double_jump = false
+		$DoubleJumpTimer.start()
+	
 	move_vector = move_and_slide(move_vector, Vector3.UP)
-
 
 func _on_WallJumpTimer_timeout():
 	can_wall_jump = true
+
+func _on_DoubleJumpTimer_timeout():
+	can_double_jump = true
