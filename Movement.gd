@@ -56,18 +56,19 @@ func _physics_process(delta):
 		can_wall_jump = true
 		can_double_jump = true
 		
+	if Input.is_action_just_pressed("ui_up") and not is_on_floor() and double_jump == true and can_double_jump:
+		move_vector.y = jump
+		can_double_jump = false
+		$DoubleJumpTimer.start()
+		
 	if Input.is_action_just_pressed("ui_up") and is_on_floor(): #Codes for basic jump
 		move_vector.y = jump
 	
 	if Input.is_action_just_pressed("ui_up") and is_on_wall() and wall_jump == true and can_wall_jump: #Codes for wall jump
 		move_vector.y = jump
 		can_wall_jump = false
+		can_double_jump = true
 		$WallJumpTimer.start()
-	
-	if Input.is_action_just_pressed("ui_up") and not is_on_floor() and double_jump == true and can_double_jump:
-		move_vector.y = jump
-		can_double_jump = false
-		$DoubleJumpTimer.start()
 	
 	move_vector = move_and_slide(move_vector, Vector3.UP)
 

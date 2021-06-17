@@ -17,7 +17,7 @@ extents = Vector3( 25, 1, 25 )
 [node name="Test Level" type="Spatial"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, -13 )
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 11, -13 )
 
 [node name="Floor" type="StaticBody" parent="."]
 transform = Transform( -0.081, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
@@ -31,11 +31,8 @@ material/0 = null
 shape = SubResource( 2 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( -4.2222e-08, 0.258819, -0.965926, 1.13133e-08, 0.965926, 0.258819, 1, 4.61853e-14, -4.37114e-08, -7, 4, 0 )
+transform = Transform( -4.2222e-08, 0.258819, -0.965926, 1.13133e-08, 0.965926, 0.258819, 1, 4.61853e-14, -4.37114e-08, -9, 4, 0 )
 script = ExtResource( 2 )
-
-[node name="CameraStopper3" parent="." instance=ExtResource( 3 )]
-transform = Transform( -2.23517e-07, 0, -1, 0, 2.5, 0, 1, 0, -2.23517e-07, 0, 0, -22 )
 
 [node name="BasicPlatform" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 17 )
@@ -43,11 +40,23 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 17 )
 [node name="BasicPlatform4" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 37 )
 
+[node name="BasicPlatform5" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 65 )
+
 [node name="BasicPlatform2" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 3 )
 
 [node name="BasicPlatform3" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, -13 )
+
+[node name="BasicPlatform6" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, -13 )
+
+[node name="BasicPlatform7" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 29, -13 )
+
+[node name="BasicPlatform8" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 39, -13 )
 
 [node name="WallJump" parent="." instance=ExtResource( 5 )]
 transform = Transform( 0.22464, 0, 0, 0, 0.23328, 0, 0, 0, 0.216, 0, 1, -13 )
@@ -57,3 +66,6 @@ transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 7.1, 0, -6.20702e-07, 0, -2
 
 [node name="DoubleJump" parent="." instance=ExtResource( 7 )]
 transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 1, 9 )
+
+[node name="CameraStopper" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.40239e-08, 0, -2.01689, 0, 5.84147, 0, 1.00715, 0, -8.81611e-08, 0, 0, -21.9784 )

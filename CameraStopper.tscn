@@ -1,25 +1,23 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://CameraStopper.gd" type="Script" id=1]
 
-[sub_resource type="BoxShape" id=1]
-extents = Vector3( 4, 1, 1 )
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 3, 8, 1 )
 
 [sub_resource type="CubeMesh" id=2]
 
 [sub_resource type="BoxShape" id=3]
 
-[sub_resource type="BoxShape" id=4]
-extents = Vector3( 2, 1, 1 )
-
 [node name="CameraStopper" type="Spatial"]
+transform = Transform( 1.00715, 0, 0, 0, 1.00715, 0, 0, 0, 2.01689, 0, 0, 0 )
 script = ExtResource( 1 )
 
 [node name="CameraFreezeDetector" type="Area" parent="."]
 
 [node name="CollisionShape" type="CollisionShape" parent="CameraFreezeDetector"]
-transform = Transform( 1, 0, 0, 0, 7.9, 0, 0, 0, 1, 3, 8.09855, 0 )
-shape = SubResource( 1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.999999, 0, 7.99361, 0 )
+shape = SubResource( 4 )
 
 [node name="Level End" type="StaticBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 8, 0, 0, 0, 1, -2, 8, 0 )
@@ -30,11 +28,6 @@ material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="Level End"]
 shape = SubResource( 3 )
-
-[node name="NextScene" type="Area" parent="Level End"]
-
-[node name="CollisionShape" type="CollisionShape" parent="Level End/NextScene"]
-shape = SubResource( 4 )
 
 [connection signal="body_entered" from="CameraFreezeDetector" to="." method="_on_Area_body_entered"]
 [connection signal="body_exited" from="CameraFreezeDetector" to="." method="_on_Area_body_exited"]
