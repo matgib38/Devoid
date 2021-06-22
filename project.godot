@@ -15,10 +15,10 @@ _global_script_class_icons={
 [application]
 
 config/name="Devoid"
-run/main_scene="res://Test Level.tscn"
+run/main_scene="res://Entities/Test Level.tscn"
 config/icon="res://icon.png"
 
 [rendering]
 
 quality/driver/driver_name="GLES2"
-environment/default_environment="res://default_env.tres"
+environment/default_environment="res://Entities/default_env.tres"

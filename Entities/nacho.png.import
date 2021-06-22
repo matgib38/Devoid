@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/nacho.png-88d1264870c19111fc973b277a90d2dd.stex"
+path="res://.import/nacho.png-734019859c1203952da946c944fb6881.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://nacho.png"
-dest_files=[ "res://.import/nacho.png-88d1264870c19111fc973b277a90d2dd.stex" ]
+source_file="res://Entities/nacho.png"
+dest_files=[ "res://.import/nacho.png-734019859c1203952da946c944fb6881.stex" ]
 
 [params]
 
