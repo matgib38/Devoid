@@ -97,6 +97,27 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 29, -13 )
 [node name="BasicPlatform8" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 39, -13 )
 
+[node name="BasicPlatform11" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 39, 17 )
+
+[node name="BasicPlatform12" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 39, 36 )
+
+[node name="BasicPlatform13" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 42, 53 )
+
+[node name="BasicPlatform14" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 44, 78 )
+
+[node name="BasicPlatform15" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 44, 92 )
+
+[node name="BasicPlatform16" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 44, 115 )
+
+[node name="BasicPlatform17" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 44, 119 )
+
 [node name="WallJump" parent="." instance=ExtResource( 5 )]
 transform = Transform( 0.22464, 0, 0, 0, 0.23328, 0, 0, 0, 0.216, 0, 1, -13 )
 
@@ -138,3 +159,58 @@ transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, -2, 
 
 [node name="Spikes11" parent="." instance=ExtResource( 6 )]
 transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, -2, 119 )
+
+[node name="Floor5" type="StaticBody" parent="."]
+transform = Transform( -0.081, 0, 0, 0, 1, 0, 0, 0, 1, 0, 39, 76 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Floor5"]
+transform = Transform( 5, 0, 0, 0, 1, 0, 0, 0, 5, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor5"]
+shape = SubResource( 2 )
+
+[node name="Floor6" type="StaticBody" parent="."]
+transform = Transform( -0.081, 0, 0, 0, 1, 0, 0, 0, 1, 0, 39, 126 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Floor6"]
+transform = Transform( 5, 0, 0, 0, 1, 0, 0, 0, 5, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor6"]
+shape = SubResource( 2 )
+
+[node name="Spikes12" parent="." instance=ExtResource( 6 )]
+transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, 41, 56 )
+
+[node name="Spikes13" parent="." instance=ExtResource( 6 )]
+transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, 41, 65 )
+
+[node name="Spikes14" parent="." instance=ExtResource( 6 )]
+transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, 41, 74 )
+
+[node name="Spikes15" parent="." instance=ExtResource( 6 )]
+transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, 41, 83 )
+
+[node name="Spikes16" parent="." instance=ExtResource( 6 )]
+transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, 41, 92 )
+
+[node name="Spikes17" parent="." instance=ExtResource( 6 )]
+transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, 41, 101 )
+
+[node name="Spikes18" parent="." instance=ExtResource( 6 )]
+transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, 41, 110 )
+
+[node name="Spikes19" parent="." instance=ExtResource( 6 )]
+transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, 41, 119 )
+
+[node name="Spikes20" parent="." instance=ExtResource( 6 )]
+transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, 41, 128 )
+
+[node name="Spikes21" parent="." instance=ExtResource( 6 )]
+transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, 41, 137 )
+
+[node name="Spikes22" parent="." instance=ExtResource( 6 )]
+transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, 41, 146 )
