@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Platforms/tower_platform_one_test.dae" type="PackedScene" id=1]
+
+[sub_resource type="BoxShape" id=1]
+
+[node name="red_platform" type="Spatial"]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="StaticBody" type="StaticBody" parent="."]
+
+[node name="tower_platform_one_test" parent="StaticBody" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 2, 0, 1, 0 )
+shape = SubResource( 1 )

@@ -1,122 +1,21 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Entities/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Entities/Camera.gd" type="Script" id=2]
 [ext_resource path="res://Entities/CameraStopper.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Entities/BasicPlatform.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Platforms/spike_floor.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Entities/WallJump.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Entities/Spikes.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Entities/DoubleJump.tscn" type="PackedScene" id=7]
-
-[sub_resource type="CubeMesh" id=1]
-size = Vector3( 10, 2, 10 )
-
-[sub_resource type="BoxShape" id=2]
-extents = Vector3( 25, 1, 25 )
+[ext_resource path="res://Platforms/red_platform.tscn" type="PackedScene" id=8]
 
 [node name="Test Level" type="Spatial"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 11, -13 )
 
-[node name="Floor" type="StaticBody" parent="."]
-transform = Transform( -0.081, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
-
-[node name="MeshInstance" type="MeshInstance" parent="Floor"]
-transform = Transform( 5, 0, 0, 0, 1, 0, 0, 0, 5, 0, 0, 0 )
-mesh = SubResource( 1 )
-material/0 = null
-
-[node name="CollisionShape" type="CollisionShape" parent="Floor"]
-shape = SubResource( 2 )
-
-[node name="Floor2" type="StaticBody" parent="."]
-transform = Transform( -0.081, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 49 )
-
-[node name="MeshInstance" type="MeshInstance" parent="Floor2"]
-transform = Transform( 5, 0, 0, 0, 1, 0, 0, 0, 5, 0, 0, 0 )
-mesh = SubResource( 1 )
-material/0 = null
-
-[node name="CollisionShape" type="CollisionShape" parent="Floor2"]
-shape = SubResource( 2 )
-
-[node name="Floor3" type="StaticBody" parent="."]
-transform = Transform( -0.081, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 99 )
-
-[node name="MeshInstance" type="MeshInstance" parent="Floor3"]
-transform = Transform( 5, 0, 0, 0, 1, 0, 0, 0, 5, 0, 0, 0 )
-mesh = SubResource( 1 )
-material/0 = null
-
-[node name="CollisionShape" type="CollisionShape" parent="Floor3"]
-shape = SubResource( 2 )
-
-[node name="Floor4" type="StaticBody" parent="."]
-transform = Transform( -0.081, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 148 )
-
-[node name="MeshInstance" type="MeshInstance" parent="Floor4"]
-transform = Transform( 5, 0, 0, 0, 1, 0, 0, 0, 5, 0, 0, 0 )
-mesh = SubResource( 1 )
-material/0 = null
-
-[node name="CollisionShape" type="CollisionShape" parent="Floor4"]
-shape = SubResource( 2 )
-
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -4.2222e-08, 0.258819, -0.965926, 1.13133e-08, 0.965926, 0.258819, 1, 4.61853e-14, -4.37114e-08, -9, 4, 0 )
 script = ExtResource( 2 )
-
-[node name="BasicPlatform" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 17 )
-
-[node name="BasicPlatform4" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 37 )
-
-[node name="BasicPlatform5" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 65 )
-
-[node name="BasicPlatform9" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 80 )
-
-[node name="BasicPlatform10" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 111 )
-
-[node name="BasicPlatform2" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 3 )
-
-[node name="BasicPlatform3" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, -13 )
-
-[node name="BasicPlatform6" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, -13 )
-
-[node name="BasicPlatform7" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 29, -13 )
-
-[node name="BasicPlatform8" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 39, -13 )
-
-[node name="BasicPlatform11" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 39, 17 )
-
-[node name="BasicPlatform12" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 39, 36 )
-
-[node name="BasicPlatform13" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 42, 53 )
-
-[node name="BasicPlatform14" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 44, 78 )
-
-[node name="BasicPlatform15" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 44, 92 )
-
-[node name="BasicPlatform16" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 44, 115 )
-
-[node name="BasicPlatform17" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 44, 119 )
 
 [node name="WallJump" parent="." instance=ExtResource( 5 )]
 transform = Transform( 0.22464, 0, 0, 0, 0.23328, 0, 0, 0, 0.216, 0, 1, -13 )
@@ -127,90 +26,23 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 1, 9 )
 [node name="CameraStopper" parent="." instance=ExtResource( 3 )]
 transform = Transform( -4.40239e-08, 0, -2.01689, 0, 5.84147, 0, 1.00715, 0, -8.81611e-08, 0, 0, -21.9784 )
 
-[node name="Spikes" parent="." instance=ExtResource( 6 )]
-transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, -2, 29 )
+[node name="red_platform" parent="." instance=ExtResource( 8 )]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 3 )
 
-[node name="Spikes2" parent="." instance=ExtResource( 6 )]
-transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, -2, 38 )
+[node name="red_platform2" parent="." instance=ExtResource( 8 )]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -13 )
 
-[node name="Spikes3" parent="." instance=ExtResource( 6 )]
-transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, -2, 47 )
+[node name="red_platform3" parent="." instance=ExtResource( 8 )]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19, -13 )
 
-[node name="Spikes4" parent="." instance=ExtResource( 6 )]
-transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, -2, 56 )
+[node name="red_platform4" parent="." instance=ExtResource( 8 )]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 38, -13 )
 
-[node name="Spikes5" parent="." instance=ExtResource( 6 )]
-transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, -2, 65 )
+[node name="red_platform5" parent="." instance=ExtResource( 8 )]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 28, -13 )
 
-[node name="Spikes6" parent="." instance=ExtResource( 6 )]
-transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, -2, 74 )
+[node name="red_platform6" parent="." instance=ExtResource( 8 )]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 17 )
 
-[node name="Spikes7" parent="." instance=ExtResource( 6 )]
-transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, -2, 83 )
-
-[node name="Spikes8" parent="." instance=ExtResource( 6 )]
-transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, -2, 92 )
-
-[node name="Spikes9" parent="." instance=ExtResource( 6 )]
-transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, -2, 101 )
-
-[node name="Spikes10" parent="." instance=ExtResource( 6 )]
-transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, -2, 110 )
-
-[node name="Spikes11" parent="." instance=ExtResource( 6 )]
-transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, -2, 119 )
-
-[node name="Floor5" type="StaticBody" parent="."]
-transform = Transform( -0.081, 0, 0, 0, 1, 0, 0, 0, 1, 0, 39, 76 )
-
-[node name="MeshInstance" type="MeshInstance" parent="Floor5"]
-transform = Transform( 5, 0, 0, 0, 1, 0, 0, 0, 5, 0, 0, 0 )
-mesh = SubResource( 1 )
-material/0 = null
-
-[node name="CollisionShape" type="CollisionShape" parent="Floor5"]
-shape = SubResource( 2 )
-
-[node name="Floor6" type="StaticBody" parent="."]
-transform = Transform( -0.081, 0, 0, 0, 1, 0, 0, 0, 1, 0, 39, 126 )
-
-[node name="MeshInstance" type="MeshInstance" parent="Floor6"]
-transform = Transform( 5, 0, 0, 0, 1, 0, 0, 0, 5, 0, 0, 0 )
-mesh = SubResource( 1 )
-material/0 = null
-
-[node name="CollisionShape" type="CollisionShape" parent="Floor6"]
-shape = SubResource( 2 )
-
-[node name="Spikes12" parent="." instance=ExtResource( 6 )]
-transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, 41, 56 )
-
-[node name="Spikes13" parent="." instance=ExtResource( 6 )]
-transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, 41, 65 )
-
-[node name="Spikes14" parent="." instance=ExtResource( 6 )]
-transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, 41, 74 )
-
-[node name="Spikes15" parent="." instance=ExtResource( 6 )]
-transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, 41, 83 )
-
-[node name="Spikes16" parent="." instance=ExtResource( 6 )]
-transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, 41, 92 )
-
-[node name="Spikes17" parent="." instance=ExtResource( 6 )]
-transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, 41, 101 )
-
-[node name="Spikes18" parent="." instance=ExtResource( 6 )]
-transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, 41, 110 )
-
-[node name="Spikes19" parent="." instance=ExtResource( 6 )]
-transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, 41, 119 )
-
-[node name="Spikes20" parent="." instance=ExtResource( 6 )]
-transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, 41, 128 )
-
-[node name="Spikes21" parent="." instance=ExtResource( 6 )]
-transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, 41, 137 )
-
-[node name="Spikes22" parent="." instance=ExtResource( 6 )]
-transform = Transform( -4.37114e-08, 0, -2, 0, 1, 0, 1, 0, -8.74228e-08, 0, 41, 146 )
+[node name="spike_floor" parent="." instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 27 )

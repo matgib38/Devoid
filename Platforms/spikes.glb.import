@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/tower_platform_one_test.glb-286268bec997051fd84b5334420dbe03.scn"
+path="res://.import/spikes.glb-4bed4c3fa6c385a05c8832c235bf13eb.scn"
 
 [deps]
 
-source_file="res://Platforms/tower_platform_one_test.glb"
-dest_files=[ "res://.import/tower_platform_one_test.glb-286268bec997051fd84b5334420dbe03.scn" ]
+source_file="res://Platforms/spikes.glb"
+dest_files=[ "res://.import/spikes.glb-4bed4c3fa6c385a05c8832c235bf13eb.scn" ]
 
 [params]
 
