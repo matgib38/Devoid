@@ -7,6 +7,8 @@ var wall_jump = false
 var can_wall_jump = false
 var double_jump = false
 var can_double_jump = false
+var dash = false
+var can_dash = false
 
 export var max_speed = 10
 export var friction = 10
@@ -71,6 +73,13 @@ func _physics_process(delta):
 		$WallJumpTimer.start()
 	
 	move_vector = move_and_slide(move_vector, Vector3.UP)
+	
+	if Input.is_action_just_pressed("ui_down"): #need to replace with proper control
+		move_vector.z = dash
+		can_dash = false
+		
+		print("help")
+
 
 func _on_WallJumpTimer_timeout():
 	can_wall_jump = true
