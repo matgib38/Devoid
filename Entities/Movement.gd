@@ -72,17 +72,21 @@ func _physics_process(delta):
 		can_double_jump = true
 		$WallJumpTimer.start()
 	
-	move_vector = move_and_slide(move_vector, Vector3.UP)
 	
-	if Input.is_action_just_pressed("ui_down"): #need to replace with proper control
-		move_vector.z = dash
+	
+	if Input.is_action_just_pressed("ui_down") and can_dash == true:
+		move_vector.z  += 500
+		print("dah")
 		can_dash = false
+		$DashTimer.start()
 		
-		print("help")
-
+	move_vector = move_and_slide(move_vector, Vector3.UP)
 
 func _on_WallJumpTimer_timeout():
 	can_wall_jump = true
 
 func _on_DoubleJumpTimer_timeout():
 	can_double_jump = true
+
+func _on_Timer_timeout():
+	can_dash = true
