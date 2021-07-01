@@ -8,14 +8,14 @@ var can_wall_jump = false
 var double_jump = false
 var can_double_jump = false
 var dash = false
-var can_dash = false
+var can_dash = true
+var dashing = false
+var input = Vector3.ZERO
 
 export var max_speed = 10
 export var friction = 10
 export var speed = 1
 export var acceleration = 0.5
-
-export var wait_time = 3 #double jump cooldown
 
 var move_vector = Vector3.ZERO
 
@@ -32,7 +32,8 @@ func _process(delta):
 	pass
 
 func _physics_process(delta):
-	var input = get_input()
+	if dashing == false:
+		input = get_input()
 	if input != Vector3.ZERO: #Codes for movement
 		speed += acceleration
 		if input > Vector3.ZERO:
@@ -58,10 +59,12 @@ func _physics_process(delta):
 		can_wall_jump = true
 		can_double_jump = true
 		
+	if is_on_wall():
+		can_double_jump = true
+		
 	if Input.is_action_just_pressed("ui_up") and not is_on_floor() and double_jump == true and can_double_jump:
 		move_vector.y = jump
 		can_double_jump = false
-		$DoubleJumpTimer.start()
 		
 	if Input.is_action_just_pressed("ui_up") and is_on_floor(): #Codes for basic jump
 		move_vector.y = jump
@@ -72,21 +75,21 @@ func _physics_process(delta):
 		can_double_jump = true
 		$WallJumpTimer.start()
 	
-	
-	
-	if Input.is_action_just_pressed("ui_down") and can_dash == true:
-		move_vector.z  += 500
-		print("dah")
+	if Input.is_action_just_pressed("ui_down") and dash and can_dash == true:
+		speed = 50
+		max_speed = 50
+		dashing = true
 		can_dash = false
-		$DashTimer.start()
-		
+		$DashLengthTimer.start()
+		$DashTimeout.start()
 	move_vector = move_and_slide(move_vector, Vector3.UP)
 
 func _on_WallJumpTimer_timeout():
 	can_wall_jump = true
 
-func _on_DoubleJumpTimer_timeout():
-	can_double_jump = true
+func _on_DashLengthTimer_timeout():
+	max_speed = 10
+	dashing = false
 
-func _on_Timer_timeout():
+func _on_DashTimeout_timeout():
 	can_dash = true
