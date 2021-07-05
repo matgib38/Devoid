@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Entities/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Camera.gd" type="Script" id=2]
 [ext_resource path="res://Player/CameraStopper.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Platforms/long_red_platform.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Entities/WallJump.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Platforms/spike_floor_short.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Platforms/spike_floor_long.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Entities/DoubleJump.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Platforms/red_platform.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Entities/Dash.tscn" type="PackedScene" id=9]
@@ -76,8 +76,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, -37 )
 [node name="long_red_platform2" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 19 )
 
-[node name="spike_floor_short" parent="." instance=ExtResource( 6 )]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0, -2, 35 )
-
 [node name="Dash" parent="." instance=ExtResource( 9 )]
 transform = Transform( 0.3, 0, 0, 0, 0.308, 0, 0, 0, 0.3, 0, 8, 3 )
+
+[node name="spike_floor_long" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 43 )
+
+[node name="spike_floor_long2" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 63 )

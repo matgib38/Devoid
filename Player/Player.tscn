@@ -40,7 +40,6 @@ wait_time = 0.25
 one_shot = true
 
 [node name="DashTimeout" type="Timer" parent="."]
-wait_time = 1.5
 
 [connection signal="timeout" from="WallJumpTimer" to="." method="_on_WallJumpTimer_timeout"]
 [connection signal="timeout" from="DashLengthTimer" to="." method="_on_DashLengthTimer_timeout"]
