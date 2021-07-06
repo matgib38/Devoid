@@ -84,3 +84,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 43 )
 
 [node name="spike_floor_long2" parent="." instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 63 )
+
+[node name="red_platform14" parent="." instance=ExtResource( 8 )]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 47 )
