@@ -3,7 +3,7 @@
 [ext_resource path="res://Title/press-start-2p/PressStart2P.ttf.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Title/titlefont.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Entities/smoke.jpg" type="Texture" id=3]
-[ext_resource path="res://Scenes/ControlMenu.gd" type="Script" id=4]
+[ext_resource path="res://Title/ControlMenu.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 120
@@ -76,7 +76,9 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 2 )
 text = "      Left - D          Right - A
+	
 	      Jump - W           Dash - L shift
+		
 	    Attack - Space            "
 
 [node name="ReturnMenu" type="Button" parent="."]
@@ -91,4 +93,4 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="ReturnMenu" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="ReturnMenu" to="." method="_on_ReturnMenu_pressed"]
