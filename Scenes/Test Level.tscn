@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Entities/WallJump.tscn" type="PackedScene" id=2]
@@ -9,86 +9,90 @@
 [ext_resource path="res://Platforms/CameraStopper.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Platforms/spike_floor_long.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Player/Camera.gd" type="Script" id=9]
+[ext_resource path="res://Entities/nachoblender.tscn" type="PackedScene" id=10]
 
 [node name="Test Level" type="Spatial"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 3.49692e-07, 0, 1, 0, -3.49692e-07, 0, 1, 0, 4, -24 )
+transform = Transform( 1, 0, 3.49692e-07, 0, 1, 0, -3.49692e-07, 0, 1, 0, 4, -15 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( -4.2222e-08, 0.258819, -0.965926, 1.13133e-08, 0.965926, 0.258819, 1, 4.61853e-14, -4.37114e-08, -13, 4, 0 )
+transform = Transform( -4.2222e-08, 0.258819, -0.965926, 1.13133e-08, 0.965926, 0.258819, 1, 4.61853e-14, -4.37114e-08, -13, 4, 9 )
 script = ExtResource( 9 )
 
 [node name="WallJump" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.22464, 0, 0, 0, 0.23328, 0, 0, 0, 0.216, 0, 7, -30 )
+transform = Transform( 0.22464, 0, 0, 0, 0.23328, 0, 0, 0, 0.216, 0, 7, -21 )
 
 [node name="DoubleJump" parent="." instance=ExtResource( 6 )]
-transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 36, 21 )
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 36, 30 )
 
 [node name="red_platform" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 3 )
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 12 )
 
 [node name="red_platform2" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -13 )
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -4 )
 
 [node name="red_platform7" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -30 )
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -21 )
 
 [node name="red_platform3" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, -5 )
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 4 )
 
 [node name="red_platform4" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 33, -13 )
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 33, -4 )
 
 [node name="red_platform10" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 33, -39 )
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 33, -30 )
 
 [node name="red_platform11" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 46, -43 )
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 46, -36 )
 
 [node name="red_platform12" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 50, -27 )
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 50, -18 )
 
 [node name="red_platform13" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 56, -13 )
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 56, -4 )
 
 [node name="red_platform8" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 33, 3 )
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 33, 12 )
 
 [node name="red_platform9" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 33, 21 )
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 33, 30 )
 
 [node name="red_platform5" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16, -13 )
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16, -4 )
 
 [node name="red_platform15" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 24, -20 )
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 24, -11 )
 
 [node name="red_platform6" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 17 )
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 26 )
 
 [node name="long_red_platform" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, -9 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0 )
 
 [node name="long_red_platform3" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, -37 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, -28 )
 
 [node name="long_red_platform2" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 19 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 28 )
 
 [node name="Dash" parent="." instance=ExtResource( 5 )]
-transform = Transform( 0.3, 0, 0, 0, 0.308, 0, 0, 0, 0.3, 0, 8, 3 )
+transform = Transform( 0.3, 0, 0, 0, 0.308, 0, 0, 0, 0.3, 0, 8, 12 )
 
 [node name="spike_floor_long" parent="." instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 43 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 52 )
 
 [node name="spike_floor_long2" parent="." instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 63 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 72 )
 
 [node name="red_platform14" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 47 )
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 56 )
 
 [node name="CameraStopper" parent="." instance=ExtResource( 7 )]
-transform = Transform( 2, 0, 0, 0, 50, 0, 0, 0, 2, 0, 0, -47 )
+transform = Transform( 2, 0, 0, 0, 50, 0, 0, 0, 2, 0, 0, -38 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="nachoblender" parent="." instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 60, -4 )
