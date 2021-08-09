@@ -86,8 +86,20 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 52 )
 [node name="spike_floor_long2" parent="." instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 72 )
 
+[node name="spike_floor_long3" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3, 96 )
+
+[node name="spike_floor_long4" parent="." instance=ExtResource( 8 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 6, 96 )
+
 [node name="red_platform14" parent="." instance=ExtResource( 3 )]
 transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 56 )
+
+[node name="red_platform16" parent="." instance=ExtResource( 3 )]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 84 )
+
+[node name="red_platform17" parent="." instance=ExtResource( 3 )]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 100 )
 
 [node name="CameraStopper" parent="." instance=ExtResource( 7 )]
 transform = Transform( 2, 0, 0, 0, 50, 0, 0, 0, 2, 0, 0, -38 )

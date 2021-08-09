@@ -79,6 +79,7 @@ func _physics_process(delta):
 		speed = 50
 		max_speed = 50
 		dashing = true
+		gravity = 0
 		can_dash = false
 		$DashLengthTimer.start()
 		$DashTimeout.start()
@@ -89,6 +90,7 @@ func _on_WallJumpTimer_timeout():
 
 func _on_DashLengthTimer_timeout():
 	max_speed = 10
+	gravity = 30
 	dashing = false
 
 func _on_DashTimeout_timeout():
