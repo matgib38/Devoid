@@ -77,6 +77,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, -28 )
 [node name="long_red_platform2" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 28 )
 
+[node name="long_red_platform4" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 120 )
+
 [node name="Dash" parent="." instance=ExtResource( 5 )]
 transform = Transform( 0.3, 0, 0, 0, 0.308, 0, 0, 0, 0.3, 0, 8, 12 )
 
@@ -91,6 +94,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3, 96 )
 
 [node name="spike_floor_long4" parent="." instance=ExtResource( 8 )]
 transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 6, 96 )
+
+[node name="spike_floor_long5" parent="." instance=ExtResource( 8 )]
+transform = Transform( -1, 8.74228e-08, 0, 8.74228e-08, 1, 8.74228e-08, 7.64274e-15, 8.74228e-08, -1, 0, 9, 96 )
 
 [node name="red_platform14" parent="." instance=ExtResource( 3 )]
 transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 56 )
