@@ -1,14 +1,36 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Blenderfiles/healthimage(nobackground).png" type="Texture" id=1]
+[ext_resource path="res://Blenderfiles/brokenhealthimage(nobackground).png" type="Texture" id=2]
+[ext_resource path="res://Hud_canvas.gd" type="Script" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "FullHealth"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ), ExtResource( 2 ) ]
+}
 
 [node name="Hud_canvas" type="CanvasLayer"]
+script = ExtResource( 3 )
 
 [node name="Health_bottle" type="TextureRect" parent="."]
-margin_right = 320.0
-margin_bottom = 180.0
-texture = ExtResource( 1 )
+margin_left = 106.0
+margin_right = 334.0
+margin_bottom = 128.0
+texture = ExtResource( 2 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Health_bottle"]
+anims/FullHealth = SubResource( 1 )
