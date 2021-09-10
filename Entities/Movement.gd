@@ -1,7 +1,5 @@
 extends KinematicBody
 
-var health = 1
-
 var gravity = 30
 var wall_gravity = 5
 var jump = 20
@@ -98,4 +96,4 @@ func _on_DashLengthTimer_timeout():
 func _on_DashTimeout_timeout():
 	can_dash = true
 
-###Health
+
