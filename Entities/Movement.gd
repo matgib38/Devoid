@@ -60,7 +60,8 @@ func _physics_process(delta):
 		can_double_jump = true
 		
 	if is_on_wall():
-		can_double_jump = true
+		if wall_jump == true:
+			can_double_jump = true
 		
 	if Input.is_action_just_pressed("jump") and not is_on_floor() and double_jump == true and can_double_jump:
 		move_vector.y = jump
