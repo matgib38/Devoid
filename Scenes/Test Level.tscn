@@ -23,10 +23,10 @@ transform = Transform( -4.2222e-08, 0.258819, -0.965926, 1.13133e-08, 0.965926, 
 script = ExtResource( 9 )
 
 [node name="WallJump" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.22464, 0, 0, 0, 0.23328, 0, 0, 0, 0.216, 0, 15, 181 )
+transform = Transform( 0.22464, 0, 0, 0, 0.23328, 0, 0, 0, 0.216, 0, 51, 231 )
 
 [node name="DoubleJump" parent="." instance=ExtResource( 6 )]
-transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 36, 30 )
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 71, 146 )
 
 [node name="red_platform" parent="." instance=ExtResource( 3 )]
 transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 17 )
@@ -65,25 +65,28 @@ transform = Transform( -2, 8.74228e-08, 0, -1.74846e-07, -1, 0, 0, 0, 1, 0, -2, 
 transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 4 )
 
 [node name="red_platform4" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 33, -4 )
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 68, 112 )
+
+[node name="red_platform7" parent="." instance=ExtResource( 3 )]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 23, 113 )
 
 [node name="red_platform10" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 33, -30 )
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 68, 86 )
 
 [node name="red_platform11" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 46, -36 )
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 81, 80 )
 
 [node name="red_platform12" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 50, -18 )
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 85, 98 )
 
 [node name="red_platform13" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 56, -4 )
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 91, 112 )
 
 [node name="red_platform8" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 33, 12 )
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 68, 128 )
 
 [node name="red_platform9" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 33, 30 )
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 68, 146 )
 
 [node name="red_platform5" parent="." instance=ExtResource( 3 )]
 transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16, -4 )
@@ -112,14 +115,32 @@ transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, -2, 
 [node name="long_red_platform4" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 120 )
 
+[node name="long_red_platform5" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 18, 136 )
+
+[node name="long_red_platform22" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 32, 142 )
+
+[node name="long_red_platform30" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 39, 166 )
+
+[node name="long_red_platform24" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 32, 82 )
+
+[node name="long_red_platform13" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1, -8.74228e-08, 3.82137e-15, 0, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 0, 18, 88 )
+
 [node name="long_red_platform6" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 164 )
 
-[node name="long_red_platform5" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 192 )
+[node name="long_red_platform21" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 181 )
+
+[node name="long_red_platform29" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, -2, 181 )
 
 [node name="long_red_platform16" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 220 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 221 )
 
 [node name="long_red_platform27" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 14, 209 )
@@ -127,14 +148,8 @@ transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 14, 
 [node name="long_red_platform28" parent="." instance=ExtResource( 4 )]
 transform = Transform( -1, 8.74228e-08, 3.82137e-15, 0, -4.37114e-08, 1, 8.74228e-08, 1, 4.37114e-08, 0, 14, 209 )
 
-[node name="long_red_platform22" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 248 )
-
 [node name="long_red_platform23" parent="." instance=ExtResource( 4 )]
-transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, -2, 220 )
-
-[node name="long_red_platform24" parent="." instance=ExtResource( 4 )]
-transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, -2, 248 )
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, -2, 221 )
 
 [node name="long_red_platform25" parent="." instance=ExtResource( 4 )]
 transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 102, 224 )
@@ -160,9 +175,6 @@ transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 102,
 [node name="long_red_platform12" parent="." instance=ExtResource( 4 )]
 transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 102, 84 )
 
-[node name="long_red_platform13" parent="." instance=ExtResource( 4 )]
-transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 102, 112 )
-
 [node name="long_red_platform14" parent="." instance=ExtResource( 4 )]
 transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 102, 140 )
 
@@ -178,20 +190,20 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3, 52.0078 )
 [node name="spike_floor_long2" parent="." instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3, 72 )
 
-[node name="spike_floor_long3" parent="." instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3, 96 )
+[node name="spike_floor_long8" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3, 252 )
 
 [node name="spike_floor_long4" parent="." instance=ExtResource( 8 )]
-transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 6, 96 )
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 6, 98 )
 
 [node name="spike_floor_long6" parent="." instance=ExtResource( 8 )]
-transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 6, 116 )
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 6, 118 )
 
 [node name="spike_floor_long5" parent="." instance=ExtResource( 8 )]
-transform = Transform( -1, 8.74228e-08, 0, 8.74228e-08, 1, 8.74228e-08, 7.64274e-15, 8.74228e-08, -1, 0, 9, 96 )
+transform = Transform( -1, 8.74228e-08, 0, 8.74228e-08, 1, 8.74228e-08, 7.64274e-15, 8.74228e-08, -1, 0, 9, 98 )
 
 [node name="spike_floor_long7" parent="." instance=ExtResource( 8 )]
-transform = Transform( -1, 8.74228e-08, 0, 8.74228e-08, 1, 8.74228e-08, 7.64274e-15, 8.74228e-08, -1, 0, 9, 116 )
+transform = Transform( -1, 8.74228e-08, 0, 8.74228e-08, 1, 8.74228e-08, 7.64274e-15, 8.74228e-08, -1, 0, 9, 118 )
 
 [node name="red_platform14" parent="." instance=ExtResource( 3 )]
 transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 56 )
@@ -205,6 +217,9 @@ transform = Transform( -2, 8.9407e-08, 0, -1.78814e-07, -1, 0, 0, 0, 1, 0, -2, 8
 [node name="red_platform17" parent="." instance=ExtResource( 3 )]
 transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 100 )
 
+[node name="red_platform56" parent="." instance=ExtResource( 3 )]
+transform = Transform( -2, 8.74228e-08, 0, -1.74846e-07, -1, 0, 0, 0, 1, 0, -2, 100 )
+
 [node name="red_platform18" parent="." instance=ExtResource( 3 )]
 transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 136 )
 
@@ -214,29 +229,44 @@ transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 140 )
 [node name="red_platform20" parent="." instance=ExtResource( 3 )]
 transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 153 )
 
+[node name="red_platform48" parent="." instance=ExtResource( 3 )]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 176 )
+
 [node name="red_platform26" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 177 )
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 46, 227 )
 
 [node name="red_platform27" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, 181 )
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 47, 231 )
 
 [node name="red_platform35" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 185 )
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 46, 235 )
 
 [node name="red_platform39" parent="." instance=ExtResource( 3 )]
 transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 205 )
 
 [node name="red_platform42" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 213 )
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 213 )
 
 [node name="red_platform43" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15, 217 )
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14, 217 )
 
 [node name="red_platform40" parent="." instance=ExtResource( 3 )]
-transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, 202 )
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 18, 201 )
+
+[node name="red_platform49" parent="." instance=ExtResource( 3 )]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 34, 248 )
+
+[node name="red_platform50" parent="." instance=ExtResource( 3 )]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 41, 260 )
+
+[node name="red_platform47" parent="." instance=ExtResource( 3 )]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 180 )
 
 [node name="red_platform41" parent="." instance=ExtResource( 3 )]
 transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 28, 209 )
+
+[node name="red_platform51" parent="." instance=ExtResource( 3 )]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22, 213 )
 
 [node name="red_platform44" parent="." instance=ExtResource( 3 )]
 transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 28, 230 )
@@ -262,11 +292,20 @@ transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 264 )
 [node name="red_platform25" parent="." instance=ExtResource( 3 )]
 transform = Transform( -2, 8.74228e-08, 0, -1.74846e-07, -1, 0, 0, 0, 1, 0, -2, 264 )
 
+[node name="red_platform52" parent="." instance=ExtResource( 3 )]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 237 )
+
+[node name="red_platform53" parent="." instance=ExtResource( 3 )]
+transform = Transform( -2, 8.74228e-08, 0, -1.74846e-07, -1, 0, 0, 0, 1, 0, -2, 237 )
+
+[node name="red_platform54" parent="." instance=ExtResource( 3 )]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 240 )
+
+[node name="red_platform55" parent="." instance=ExtResource( 3 )]
+transform = Transform( -2, 8.74228e-08, 0, -1.74846e-07, -1, 0, 0, 0, 1, 0, -2, 240 )
+
 [node name="long_red_platform20" parent="." instance=ExtResource( 4 )]
 transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, -2, 164 )
-
-[node name="long_red_platform21" parent="." instance=ExtResource( 4 )]
-transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, -2, 192 )
 
 [node name="CameraStopper" parent="." instance=ExtResource( 7 )]
 transform = Transform( 2, 0, 0, 0, 50, 0, 0, 0, 2, 0, 0, -38 )
@@ -275,30 +314,30 @@ transform = Transform( 2, 0, 0, 0, 50, 0, 0, 0, 2, 0, 0, -38 )
 transform = Transform( -2, 0, -1.74846e-07, 0, 50, 0, 1.74846e-07, 0, -2, 0, 0, 262 )
 
 [node name="nachoblender" parent="." instance=ExtResource( 10 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 19, 188 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 19, 230 )
 
 [node name="Hud_canvas" parent="." instance=ExtResource( 11 )]
 
 [node name="spike_floor_short" parent="." instance=ExtResource( 12 )]
-transform = Transform( -1.31134e-07, 8.74228e-08, 1, -1.14641e-14, -1, 8.74228e-08, 1, 0, 1.31134e-07, 0, 6, 128 )
+transform = Transform( -1.31134e-07, 8.74228e-08, 1, -1.14641e-14, -1, 8.74228e-08, 1, 0, 1.31134e-07, 0, 6, 130 )
 
 [node name="spike_floor_short2" parent="." instance=ExtResource( 12 )]
-transform = Transform( -1.31134e-07, 8.74228e-08, 1, -1.14641e-14, -1, 8.74228e-08, 1, 0, 1.31134e-07, 0, 6, 132 )
+transform = Transform( -1.31134e-07, 8.74228e-08, 1, -1.14641e-14, -1, 8.74228e-08, 1, 0, 1.31134e-07, 0, 6, 134 )
 
 [node name="spike_floor_short8" parent="." instance=ExtResource( 12 )]
-transform = Transform( -1.31134e-07, 8.74228e-08, 1, -1.14641e-14, -1, 8.74228e-08, 1, 0, 1.31134e-07, 0, 9, 181 )
+transform = Transform( -1.31134e-07, 8.74228e-08, 1, -1.14641e-14, -1, 8.74228e-08, 1, 0, 1.31134e-07, 0, 45, 231 )
 
 [node name="spike_floor_short9" parent="." instance=ExtResource( 12 )]
-transform = Transform( -1.31134e-07, 8.74228e-08, 1, -1.14641e-14, -1, 8.74228e-08, 1, 0, 1.31134e-07, 0, 9, 185 )
+transform = Transform( -1.31134e-07, 8.74228e-08, 1, -1.14641e-14, -1, 8.74228e-08, 1, 0, 1.31134e-07, 0, 45, 235 )
 
 [node name="spike_floor_short10" parent="." instance=ExtResource( 12 )]
-transform = Transform( -1.31134e-07, 8.74228e-08, 1, -1.14641e-14, -1, 8.74228e-08, 1, 0, 1.31134e-07, 0, 9, 177 )
+transform = Transform( -1.31134e-07, 8.74228e-08, 1, -1.14641e-14, -1, 8.74228e-08, 1, 0, 1.31134e-07, 0, 45, 227 )
 
 [node name="spike_floor_short3" parent="." instance=ExtResource( 12 )]
-transform = Transform( 1.31134e-07, -1.74846e-07, -1, 2.29282e-14, 1, -1.74846e-07, 1, 0, 1.31134e-07, 0, 9, 128 )
+transform = Transform( 1.31134e-07, -1.74846e-07, -1, 2.29282e-14, 1, -1.74846e-07, 1, 0, 1.31134e-07, 0, 9, 130 )
 
 [node name="spike_floor_short4" parent="." instance=ExtResource( 12 )]
-transform = Transform( 1.31134e-07, -1.74846e-07, -1, 2.29282e-14, 1, -1.74846e-07, 1, 0, 1.31134e-07, 0, 9, 132 )
+transform = Transform( 1.31134e-07, -1.74846e-07, -1, 2.29282e-14, 1, -1.74846e-07, 1, 0, 1.31134e-07, 0, 9, 134 )
 
 [node name="spike_floor_short5" parent="." instance=ExtResource( 12 )]
 transform = Transform( 1.31134e-07, -1.74846e-07, -1, 2.29282e-14, 1, -1.74846e-07, 1, 0, 1.31134e-07, 0, -3, 144 )
@@ -311,3 +350,24 @@ transform = Transform( 1.31134e-07, -1.74846e-07, -1, 2.29282e-14, 1, -1.74846e-
 
 [node name="spike_floor_short6" parent="." instance=ExtResource( 12 )]
 transform = Transform( 1.31134e-07, -1.74846e-07, -1, 2.29282e-14, 1, -1.74846e-07, 1, 0, 1.31134e-07, 0, -3, 148 )
+
+[node name="spike_floor_short15" parent="." instance=ExtResource( 12 )]
+transform = Transform( 1.31134e-07, -1.74846e-07, -1, 2.29282e-14, 1, -1.74846e-07, 1, 0, 1.31134e-07, 0, -3, 88 )
+
+[node name="spike_floor_short16" parent="." instance=ExtResource( 12 )]
+transform = Transform( 1.31134e-07, -1.74846e-07, -1, 2.29282e-14, 1, -1.74846e-07, 1, 0, 1.31134e-07, 0, -3, 92 )
+
+[node name="spike_floor_short17" parent="." instance=ExtResource( 12 )]
+transform = Transform( 1.31134e-07, -1.74846e-07, -1, 2.29282e-14, 1, -1.74846e-07, 1, 0, 1.31134e-07, 0, -3, 96 )
+
+[node name="spike_floor_short18" parent="." instance=ExtResource( 12 )]
+transform = Transform( 1.31134e-07, -1.74846e-07, -1, 2.29282e-14, 1, -1.74846e-07, 1, 0, 1.31134e-07, 0, -3, 104 )
+
+[node name="spike_floor_short12" parent="." instance=ExtResource( 12 )]
+transform = Transform( 1.31134e-07, -1.74846e-07, -1, 2.29282e-14, 1, -1.74846e-07, 1, 0, 1.31134e-07, 0, -3, 197 )
+
+[node name="spike_floor_short13" parent="." instance=ExtResource( 12 )]
+transform = Transform( 1.31134e-07, -1.74846e-07, -1, 2.29282e-14, 1, -1.74846e-07, 1, 0, 1.31134e-07, 0, -3, 201 )
+
+[node name="spike_floor_short14" parent="." instance=ExtResource( 12 )]
+transform = Transform( 1.31134e-07, -1.74846e-07, -1, 2.29282e-14, 1, -1.74846e-07, 1, 0, 1.31134e-07, 0, -3, 205 )
