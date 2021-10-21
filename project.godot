@@ -18,6 +18,10 @@ config/name="Devoid"
 run/main_scene="res://Scenes/TitleScreen.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Health="*res://Scripts/health.gd"
+
 [display]
 
 window/size/width=1280

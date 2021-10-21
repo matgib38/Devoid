@@ -60,23 +60,23 @@ func _physics_process(delta):
 		can_double_jump = true
 		
 	if is_on_wall():
-		if wall_jump == true:
+		if Health.wall_jump == true:
 			can_double_jump = true
 		
-	if Input.is_action_just_pressed("jump") and not is_on_floor() and double_jump == true and can_double_jump:
+	if Input.is_action_just_pressed("jump") and not is_on_floor() and Health.double_jump == true and can_double_jump:
 		move_vector.y = jump
 		can_double_jump = false
 		
 	if Input.is_action_just_pressed("jump") and is_on_floor(): #Codes for basic jump
 		move_vector.y = jump
 	
-	if Input.is_action_just_pressed("jump") and is_on_wall() and wall_jump == true and can_wall_jump: #Codes for wall jump
+	if Input.is_action_just_pressed("jump") and is_on_wall() and Health.wall_jump == true and can_wall_jump: #Codes for wall jump
 		move_vector.y = jump
 		can_wall_jump = false
 		can_double_jump = true
 		$WallJumpTimer.start()
 	
-	if Input.is_action_just_pressed("do_dash") and dash and can_dash == true:
+	if Input.is_action_just_pressed("do_dash") and Health.dash and can_dash == true:
 		speed = 50
 		max_speed = 50
 		dashing = true
