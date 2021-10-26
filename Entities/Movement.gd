@@ -46,7 +46,7 @@ func _physics_process(delta):
 	move_vector.z = input.z * speed
 	
 	if is_on_wall():
-		if wall_jump and can_wall_jump:
+		if Health.wall_jump and can_wall_jump:
 			if move_vector.y > 0 :
 				move_vector.y = 0
 			move_vector.y -= wall_gravity * delta
