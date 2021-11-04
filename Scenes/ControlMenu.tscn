@@ -77,9 +77,13 @@ size_flags_vertical = 3
 custom_fonts/font = ExtResource( 2 )
 text = "      Left - D          Right - A
 	
-	      Jump - W           Dash - L shift
+	      Jump - W          Dash - L shift 
 		
-	    Attack - Space            "
+		
+		
+			      Wall Jump - W (While On Wall)
+				
+					      Double Jump - W (While In Air)"
 
 [node name="ReturnMenu" type="Button" parent="."]
 margin_left = 10.0
@@ -100,7 +104,7 @@ margin_right = 1259.81
 margin_bottom = 41.0
 size_flags_horizontal = 0
 custom_fonts/font = ExtResource( 2 )
-text = "Tip"
+text = "Tips"
 __meta__ = {
 "_edit_use_anchors_": false
 }
