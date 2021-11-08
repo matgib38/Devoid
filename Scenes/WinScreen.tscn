@@ -94,16 +94,16 @@ custom_constants/separation = 15
 [node name="RestartButton" type="Button" parent="MainContainer/BlueBackground/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
 margin_right = 580.0
 margin_bottom = 31.0
-custom_fonts/font = ExtResource( 3 )
 custom_constants/hseparation = 0
+custom_fonts/font = ExtResource( 3 )
 text = "Return To Title Screen"
 
 [node name="ExitButton" type="Button" parent="MainContainer/BlueBackground/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
 margin_top = 46.0
 margin_right = 580.0
 margin_bottom = 77.0
-custom_fonts/font = ExtResource( 3 )
 custom_constants/hseparation = 0
+custom_fonts/font = ExtResource( 3 )
 text = "Exit"
 
 [connection signal="pressed" from="MainContainer/BlueBackground/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/RestartButton" to="." method="_on_RestartButton_pressed"]

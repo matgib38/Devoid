@@ -81,8 +81,8 @@ custom_constants/separation = 15
 [node name="Startbutton" type="Button" parent="MainContainer/BlueBackground/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
 margin_right = 580.0
 margin_bottom = 31.0
-custom_fonts/font = ExtResource( 3 )
 custom_constants/hseparation = 0
+custom_fonts/font = ExtResource( 3 )
 text = "Press Start"
 
 [node name="Controlbutton" type="Button" parent="MainContainer/BlueBackground/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]

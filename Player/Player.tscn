@@ -1,12 +1,20 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Entities/Movement.gd" type="Script" id=1]
 
 [sub_resource type="CapsuleMesh" id=1]
 radius = 0.5
 
+[sub_resource type="SpatialMaterial" id=4]
+albedo_color = Color( 0, 0, 0, 1 )
+roughness = 0.0
+
 [sub_resource type="PrismMesh" id=2]
 size = Vector3( 0.2, 0.5, 0.5 )
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_color = Color( 0, 0, 0, 1 )
+roughness = 0.0
 
 [sub_resource type="CapsuleShape" id=3]
 radius = 0.5
@@ -20,12 +28,12 @@ transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1, 1
 [node name="CharacterMesh" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1, 0 )
 mesh = SubResource( 1 )
-material/0 = null
+material/0 = SubResource( 4 )
 
 [node name="PointDirection" type="MeshInstance" parent="CharacterMesh"]
 transform = Transform( -1, -8.74228e-08, 3.82137e-15, 8.74228e-08, -1, 8.74228e-08, -3.82137e-15, 8.74228e-08, 1, 0, -1, 5.96046e-08 )
 mesh = SubResource( 2 )
-material/0 = null
+material/0 = SubResource( 5 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1, 0 )
@@ -39,6 +47,29 @@ wait_time = 0.25
 one_shot = true
 
 [node name="DashTimeout" type="Timer" parent="."]
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0 )
+light_energy = 0.3
+
+[node name="DirectionalLight2" type="DirectionalLight" parent="."]
+light_energy = 0.3
+
+[node name="DirectionalLight3" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
+light_energy = 0.3
+
+[node name="DirectionalLight4" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0 )
+light_energy = 0.3
+
+[node name="DirectionalLight5" type="DirectionalLight" parent="."]
+transform = Transform( -4.37114e-08, 8.74228e-08, 1, 0, -1, 8.74228e-08, 1, 3.82137e-15, 4.37114e-08, 0, 0, 0 )
+light_energy = 0.3
+
+[node name="DirectionalLight6" type="DirectionalLight" parent="."]
+transform = Transform( -4.37114e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, 3.82137e-15, 4.37114e-08, 0, 0, 0 )
+light_energy = 0.3
 
 [connection signal="timeout" from="WallJumpTimer" to="." method="_on_WallJumpTimer_timeout"]
 [connection signal="timeout" from="DashLengthTimer" to="." method="_on_DashLengthTimer_timeout"]
