@@ -11,6 +11,8 @@ var dash = false
 var can_dash = true
 var dashing = false
 var input = Vector3.ZERO
+var do_dash = false
+var sound
 
 export var max_speed = 10
 export var friction = 10
@@ -28,13 +30,19 @@ func get_input(): #Codes for movement
 	input = input.normalized()
 	return input
 
-func _process(delta):
+func _process(delta): #Plays sound when buttons pressed
+	if Input.is_action_just_pressed("do_dash") and do_dash == false and Health.dash == true:
+		do_dash = true
+		sound = SoundPlayer.play_sound_effect("do_dash")
+	elif Input.is_action_just_released("do_dash") and do_dash == true:
+		do_dash = false
+		#sound.stop()
 	pass
 
-func _physics_process(delta):
+func _physics_process(delta): #Codes the dash to accellerate the player
 	if dashing == false:
 		input = get_input()
-	if input != Vector3.ZERO: #Codes for movement
+	if input != Vector3.ZERO:
 		speed += acceleration
 		if input > Vector3.ZERO:
 			$CharacterMesh.rotation_degrees.y = 180
@@ -45,7 +53,7 @@ func _physics_process(delta):
 	
 	move_vector.z = input.z * speed
 	
-	if is_on_wall():
+	if is_on_wall(): #Wall jump code
 		if Health.wall_jump and can_wall_jump:
 			if move_vector.y > 0 :
 				move_vector.y = 0
@@ -55,7 +63,7 @@ func _physics_process(delta):
 	else:
 			move_vector.y -= gravity * delta
 		
-	if is_on_floor():
+	if is_on_floor(): #resets timer for wall and double jump
 		can_wall_jump = true
 		can_double_jump = true
 		
@@ -96,5 +104,3 @@ func _on_DashLengthTimer_timeout():
 
 func _on_DashTimeout_timeout():
 	can_dash = true
-
-
