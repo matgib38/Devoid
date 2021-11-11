@@ -31,12 +31,12 @@ func get_input(): #Codes for movement
 	return input
 
 func _process(delta): #Plays sound when buttons pressed
-	if Input.is_action_just_pressed("do_dash") and do_dash == false and Health.dash == true:
+	if Input.is_action_just_pressed("do_dash") and do_dash == false and Health.dash == true and dashing == true:
 		do_dash = true
 		sound = SoundPlayer.play_sound_effect("do_dash")
 	elif Input.is_action_just_released("do_dash") and do_dash == true:
 		do_dash = false
-		#sound.stop()
+		#sound.stop() #removed due to sound effects cutting before the desired time
 	pass
 
 func _physics_process(delta): #Codes the dash to accellerate the player
@@ -73,6 +73,7 @@ func _physics_process(delta): #Codes the dash to accellerate the player
 		
 	if Input.is_action_just_pressed("jump") and not is_on_floor() and Health.double_jump == true and can_double_jump:
 		move_vector.y = jump
+		sound = SoundPlayer.play_sound_effect("do_double_jump")
 		can_double_jump = false
 		
 	if Input.is_action_just_pressed("jump") and is_on_floor(): #Codes for basic jump

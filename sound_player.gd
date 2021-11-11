@@ -5,12 +5,14 @@ onready var music = AudioStreamPlayer.new()
 
 #This creates dictionary for music track sounds.
 var music_tracks = {
-
+	"main_theme":"res://SoundFiles/[SFM] Shrekophone.wav"
 }
 
 #This creates a dictionary for sound effects.
 var sound_effects = {
 	"do_dash":"res://SoundFiles/fire_dash_crisp.wav",
+	"do_double_jump":"res://SoundFiles/seizmic_charge_good.wav",
+	"death":"res://SoundFiles/roblox_oof.wav"
 }
 
 #This checks the inputs for cheatcodes that change the sound effects.
@@ -34,17 +36,21 @@ func change_music_db(val):
 func change_sound_db(val):
 	sound_db = linear2db(val)
 #This plays the music.
-#func _ready():
-	#music.stream = load(music_tracks[""])
-	#add_child(music)
-	#music.play()
-	#print(music.stream)
-	#print("playing music")
+func _ready():
+	change_music_db(0.08)
+	music.volume_db = music_db
+	music.stream = load(music_tracks["main_theme"])
+	add_child(music)
+	music.play()
+	print(music.stream)
+	print("playing music")
 
 #This plays sound effects.
 func play_sound_effect(sfx):
 	var sound = AudioStreamPlayer.new()
 	sound.stream = load(sound_effects[sfx])
+	change_sound_db(.1)
+	sound.volume_db = sound_db
 	add_child(sound)
 	sound.play()
 	
